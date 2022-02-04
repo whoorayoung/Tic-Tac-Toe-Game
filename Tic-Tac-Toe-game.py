@@ -1,7 +1,10 @@
-def main():
-    pass
+'''
+Tic-Tac-Toe-Game
+Author: Youngwho Park
+'''
 
 def create_board():
+    board = []
     pass
 
 def display_board():
@@ -19,5 +22,9 @@ def make_move():
 def player():
     pass
 
+def main():
+    pass
+
 if __name__ == "__main__":
     main()
+    
