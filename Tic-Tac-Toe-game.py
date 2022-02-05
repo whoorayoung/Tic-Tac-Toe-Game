@@ -9,6 +9,7 @@ def main():
     turn = 0    
     
     while winner(board) != True:
+        turn = x_or_o(turn)
         make_move(turn, board)
         print()
         display_board(board)
@@ -38,9 +39,9 @@ def display_board(board):
 def x_or_o(turn):
     turn += 1
     if turn % 2 == 0:
-        return True
+        return turn
     else:
-        return False
+        return turn
 
 def winner(board):
     return (board[0] == board[1] == board[2] or
@@ -53,8 +54,7 @@ def winner(board):
             board[2] == board[4] == board[6])
 
 def make_move(turn, board):
-    t = x_or_o(turn)
-    if t == True: 
+    if turn % 2 == 0: 
         number = int(input("o's turn to choose a square (1-9): "))
         board[number-1] = "o"
     else:
